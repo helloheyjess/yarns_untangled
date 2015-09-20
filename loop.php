@@ -25,7 +25,7 @@
 					?>
 				</div>
 				<h2 class="entry-title"><?php the_title(); ?></h2>
-				<?php the_excerpt(); ?>
+				<?php the_content(); ?>
 				<?php wp_link_pages( array(
           'before' => '<div class="page-link"> Pages:',
           'after' => '</div>'

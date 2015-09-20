@@ -20,11 +20,11 @@ get_header();  ?>
 		</div>
 		<?php $loop = new WP_Query( array( 'post_type' => 'featured' ) ); ?>
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-				<div class="feature">
-					<h2>Featured Yarn</h2>
 					<?php 
 						if( get_field('feature_on_front_page') )
 						{ ?>
+							<div class="feature">
+							<h2>Featured Yarn</h2>
 			  				<?php 
 							if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 								the_post_thumbnail('medium');
@@ -33,8 +33,9 @@ get_header();  ?>
 						    <h3><?php the_title(); ?></h3>
 						    <p><?php the_field('short_desc'); ?>...</p>
 						    <a href="<?php the_permalink() ?>">Learn More</a>
+					    </div>
 					<?php } ?>
-				</div>
+				
 			<?php endwhile; wp_reset_query(); ?>
 	</div>
 	<div class="inner-container">
