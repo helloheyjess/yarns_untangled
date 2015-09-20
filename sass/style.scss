@@ -40,15 +40,15 @@ body {
 	margin: 50px 0;
 }
 
-.content-featured {
-	border: 1px dotted $orange;
-	border-radius: 3px;
-	padding: 25px;
-}
-
 .entry-content {
 	margin-top: 25px;
 	margin-bottom: 50px;
+}
+
+.the-post {
+	border: 1px dotted $orange;
+	padding: 25px;
+	margin: 25px 0;
 }
 
 
@@ -71,15 +71,29 @@ body {
 	border-radius: 3px;
 	padding: 25px;
 	width: 30%;
+	h3 {
+		margin: 0;
+	}
+	p {
+		margin-top: 0;
+	}
 }
 
-.wp-post-image {
+.featured {
+	footer {
+		display: none;
+	}
+}
+
+.archive {
+	.featured {
+		margin: 25px 0;
+	}
+}
+
+.post-thumb {
 	float: left;
-	margin: 5px 20px 5px 0;
-}
-
-.post footer {
-	display: none;
+	margin: 5px 25px 5px 0;
 }
 
 
@@ -90,13 +104,15 @@ body {
 	margin: 0;
 	padding: 0;
 	display: flex;
+	margin-bottom: 50px;
 }
 
 .rpwe-block li{
 	border-left: 3px solid #2ac0d1;
-	padding: 35px 25px;
+	padding: 45px 35px;
 	margin-right: 15px;
 	background: $white;
+	border-radius: 3px;
 }
 
 .more-link {
@@ -106,8 +122,11 @@ body {
 
 .rpwe-block h3{
 	margin-top: 0;
-	font-size: 1em;
-	font-family: 'Open Sans', sans-serif;
+	a {
+		color: $black;
+		text-transform: none;
+		font-weight: 700;
+	}
 }
 
 .rpwe-clearfix:before,

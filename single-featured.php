@@ -22,6 +22,7 @@
                 'before' => '<div class="page-link"> Pages: ',
                 'after' => '</div>'
               )); ?>
+              <a href="http://localhost:8888/Work/003-yarns-untangled/wordpress/featured/" class="btn">Back to Featured Yarns</a>
             </div><!-- .entry-content -->
          </div>
         </div><!-- #post-## -->

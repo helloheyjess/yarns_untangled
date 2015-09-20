@@ -14,11 +14,13 @@
           </div><!-- .entry-meta -->
 
           <div class="entry-content">
-            <?php 
-              if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-                the_post_thumbnail('blog');
-              } 
-            ?>
+            <div class="post-thumb">
+              <?php 
+                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                  the_post_thumbnail('blog');
+                } 
+              ?>
+            </div>
             <?php the_content(); ?>
             <?php wp_link_pages(array(
               'before' => '<div class="page-link"> Pages: ',

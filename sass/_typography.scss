@@ -7,8 +7,13 @@ $orange: #f7921e;
 $yellow: #f5d548;
 $red: #ed2231;
 
-h1, h2, h3, h4 {
+h1, h2 {
 	font-family: "museo-slab",serif;
+}
+
+h3, h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.1em;
 }
 
 a {

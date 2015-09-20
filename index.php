@@ -5,19 +5,20 @@
   <div class="container">
 
     <div class="content">
-    	<div class="post">
-    		<?php if ( have_posts() ) : ?>
-    		<?php while ( have_posts() ) : the_post();  ?>
-    			<h2><?php the_title(); ?></h2>
-    			<?php the_excerpt(); ?>
-			<?php endwhile; ?>
-			<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-			<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
+        <h1>Yarns Untangled Blog</h1>
+		<?php if ( have_posts() ) : ?>
+		<?php while ( have_posts() ) : the_post();  ?>
+            <div class="the-post">
+                <h2><?php the_title(); ?></h2>
+                <?php the_excerpt(); ?>
+            </div>
+		<?php endwhile; ?>
+		<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+		<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 
-			<?php else : ?>
-			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
-			<?php endif; ?>
-    	</div>
+		<?php else : ?>
+		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+		<?php endif; ?>
     </div> <!--/.content -->
 
     <?php get_sidebar(); ?>
