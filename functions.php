@@ -14,6 +14,7 @@ function theme_setup() {
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
 	add_image_size('logo', 300, 74, false);
+	add_image_size('blog', 400, 200, true);
 
 	// Add theme support for logo
 	add_theme_support( 'site-logo', array(
@@ -159,15 +160,15 @@ add_filter( 'get_the_excerpt', 'hackeryou_custom_excerpt_more' );
  * Display in your template with dynamic_sidebar()
  */
 function hackeryou_widgets_init() {
-	// Area 1, located at the top of the sidebar.
+	// Hours and Contact
 	register_sidebar( array(
-		'name' => 'Primary Widget Area',
-		'id' => 'primary-widget-area',
-		'description' => 'The primary widget area',
-		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</li>',
+		'name' => 'Contact',
+		'id' => 'contact-widget-area',
+		'description' => 'The contact widget area',
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'after_title' => '</h3>'
 	) );
 	// Instagram
 	register_sidebar( array(
@@ -175,9 +176,10 @@ function hackeryou_widgets_init() {
 		'id' => 'instagram-widget-area',
 		'description' => 'The Instagram widget area',
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-		'after_widget' => '</div>'
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
 	) );
-
 }
 
 add_action( 'widgets_init', 'hackeryou_widgets_init' );
