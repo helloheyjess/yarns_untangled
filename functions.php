@@ -122,7 +122,7 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 100;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
 
@@ -130,7 +130,7 @@ add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return ' <div><a href="'. get_permalink() . '" class="btn">Read More</a></div>';
 }
 
 /**
@@ -160,6 +160,16 @@ add_filter( 'get_the_excerpt', 'hackeryou_custom_excerpt_more' );
  * Display in your template with dynamic_sidebar()
  */
 function hackeryou_widgets_init() {
+	// Latest Posts
+	register_sidebar( array(
+		'name' => 'Latest',
+		'id' => 'latest-posts-widget-area',
+		'description' => 'The latest posts widget area',
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>'
+	) );
 	// Hours and Contact
 	register_sidebar( array(
 		'name' => 'Contact',

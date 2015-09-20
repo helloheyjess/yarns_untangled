@@ -15,12 +15,13 @@ get_header();  ?>
 
 				<h1><?php the_title(); ?></h1>
 				<?php the_content(); ?>
-				<a href="#" class="btn">Learn more about us</a>
+				<a href="http://localhost:8888/Work/003-yarns-untangled/wordpress/about-us/" class="btn">Learn more about us</a>
 			<?php endwhile; // end the loop?>
 		</div>
 		<?php $loop = new WP_Query( array( 'post_type' => 'featured' ) ); ?>
 			<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 				<div class="feature">
+					<h2>Featured Yarn</h2>
 					<?php 
 						if( get_field('feature_on_front_page') )
 						{ ?>
@@ -37,7 +38,7 @@ get_header();  ?>
 			<?php endwhile; wp_reset_query(); ?>
 	</div>
 	<div class="inner-container">
-		<h2>Latest from the Blog</h2>
+		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Latest') ) ?>
 	</div>
   </div> <!-- /.container -->
 </div> <!-- /.main -->
