@@ -9,6 +9,7 @@
 
 @import 'normalize';
 @import 'typography';
+@import 'header';
 @import 'navigation';
 @import 'sidebar';
 @import 'comments';
@@ -24,22 +25,46 @@ img {
 }
 
 body {
-	color: #333;
+	font-family: 'Open Sans', sans-serif;
+	color: $black;
 }
 
 .container {
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 50px auto;
+	padding: 0 2.5%;
 }
 
 .content {
-	float: left;
+	margin: 50px 0;
+}
+
+.content-featured {
+	border: 1px dotted $orange;
+	border-radius: 3px;
+	padding: 25px;
+}
+
+
+.full {
+	width: 100%;
+}
+
+.inner-container {
+	display: flex;
+	margin: 50px 0;
+}
+
+.welcome {
 	width: 65%;
 	margin-right: 5%;
 }
 
-.full {
-	width: 100%;
+.feature {
+	border: 1px dotted $orange;
+	border-radius: 3px;
+	padding: 25px;
+	width: 30%;
 }
 
 

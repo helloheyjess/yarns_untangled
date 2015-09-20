@@ -34,9 +34,6 @@
         'theme_locations' => 'primary'
       )); ?>
     </nav>
-    <div class="hero">
-      
-    </div>
   </div> <!-- /.container -->
 </header><!--/.header-->
 

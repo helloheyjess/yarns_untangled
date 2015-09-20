@@ -13,7 +13,12 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
+	add_image_size('logo', 300, 74, false);
 
+	// Add theme support for logo
+	add_theme_support( 'site-logo', array(
+	    'size' => 'logo',
+	) );
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
@@ -163,6 +168,14 @@ function hackeryou_widgets_init() {
 		'after_widget' => '</li>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
+	) );
+	// Instagram
+	register_sidebar( array(
+		'name' => 'Instagram',
+		'id' => 'instagram-widget-area',
+		'description' => 'The Instagram widget area',
+		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</div>'
 	) );
 
 }

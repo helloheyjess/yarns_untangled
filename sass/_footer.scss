@@ -1,3 +1,42 @@
 footer {
 	clear: both;
+	background: $orange;
+	display: flex;
+	color: $white;
+}
+
+.map {
+	background: url('http://maps.googleapis.com/maps/api/staticmap?center=43.655113,+-79.403380&zoom=15&scale=2&size=600x300&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7C%7C43.655113,+-79.403380');
+	background-size: cover;
+	background-position: center; 
+}
+
+.contact,
+.instagram,
+.map {
+	padding: 25px 35px;
+	width: 33.33%;
+}
+
+.contact {
+	width: 30%;
+}
+
+ul.social {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	li {
+		display: inline-block;
+		font-size: 2.5em;
+		padding: 0;
+		margin-right: 10px;
+	}
+	a {
+		color: $white;
+		&:hover,
+		&:focus {
+			color: $black;
+		}
+	}
 }
