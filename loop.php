@@ -16,17 +16,19 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<section class="entry-content featured-yarn">
-				<div class="yarn-thumb">
-	  				<?php 
-					if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-						the_post_thumbnail('medium');
-					} 
-					?>
-				</div>
-				<div class="post-content">
-					<h2 class="entry-title"><?php the_title(); ?></h2>
-					<?php the_content(); ?>
+			<section class="entry-content">
+				<div class="item-container">
+					<div class="img-thumb">
+		  				<?php 
+						if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+							the_post_thumbnail('medium');
+						} 
+						?>
+					</div>
+					<div class="post-content">
+						<h2 class="entry-title"><?php the_title(); ?></h2>
+						<?php the_content(); ?>
+					</div>
 				</div>
 				<?php wp_link_pages( array(
           'before' => '<div class="page-link"> Pages:',

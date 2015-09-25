@@ -3,7 +3,7 @@
 <div class="main">
   <div class="container">
     <div class="content">
-      <h1>Teachers</h1>
+      <h1 class="centered">Teachers</h1>
       <?php if ( have_posts() ) the_post(); ?>
 
 
