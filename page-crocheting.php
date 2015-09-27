@@ -1,7 +1,7 @@
 <?php
 
 /*
-	Template Name: Classes
+	Template Name: Crocheting
 */
 
 get_header();  ?>
@@ -14,7 +14,7 @@ get_header();  ?>
       <h1><?php the_title(); ?></h1>
       <?php the_content(); ?>
     <?php endwhile; // end the loop?>
-    <?php $loop = new WP_Query( array( 'post_type' => 'classes' ) ); ?>
+    <?php $loop = new WP_Query( array( 'post_type' => 'classes', 'category_name' => 'crocheting' ) ); ?>
 	    <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	    	<div class="entry-content">
     			<h2 class="entry-title"><?php the_title(); ?></h2>
