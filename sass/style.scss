@@ -33,7 +33,9 @@ body {
 .container {
 	max-width: 1100px;
 	margin: 50px auto;
-	// padding: 0 2.5%;
+	@media all and (max-width: 1024px) {
+		padding: 0 2.5%;
+	}
 }
 
 .centered {
@@ -73,18 +75,32 @@ body {
 .inner-container {
 	display: flex;
 	margin: 50px 0;
+	flex-wrap: wrap;
 }
 
 .welcome {
 	width: 60%;
 	margin-right: 5%;
+	@media all and (max-width: 1024px) {
+		width: 100%;
+	}
 }
 
 .feature {
-	border: 1px solid $yellow;
+	border-top: 3px solid $yellow;
+	background: $white;
 	border-radius: 3px;
 	padding: 15px 35px;
 	width: 35%;
+	@media all and (max-width: 1024px) {
+		width: 100%;
+		border-top: none;
+		border-left: 3px solid $yellow;
+		margin-top: 50px;
+		img {
+			float: left;
+		}
+	}
 	a {
 		color: $blue;
 	}
@@ -96,6 +112,12 @@ body {
 	}
 	p {
 		margin-top: 0;
+	}
+	img {
+		mix-blend-mode: multiply;
+		margin: 10px 0;
+		max-width: 100%;
+		height: auto;
 	}
 }
 
@@ -142,6 +164,14 @@ body {
 	padding: 0;
 	display: flex;
 	margin-bottom: 50px;
+	flex-wrap: wrap;
+	li {
+		width: calc(50% - 15px);
+		@media all and (max-width: 800px){
+			width: 100%;
+			margin-top: 25px;
+		}
+	}
 }
 
 .rpwe-block li{
