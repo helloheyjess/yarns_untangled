@@ -93,7 +93,7 @@ body {
 	padding: 15px 35px;
 	width: 35%;
 	@media all and (max-width: 1024px) {
-		width: 100%;
+		width: calc(100% - 15px);
 		border-top: none;
 		border-left: 3px solid $yellow;
 		margin-top: 50px;
@@ -238,6 +238,8 @@ zoom: 1;
 	color: $orange;
 	font-weight: 600;
 }
+
+
 
 
 
