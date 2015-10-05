@@ -9,7 +9,7 @@ footer {
 .contact,
 .instagram,
 .map {
-	padding: 25px 35px;
+	padding: 35px;
 	width: 33.33%;
 	@media all and (max-width: 1024px) {
 		width: 50%;
@@ -39,6 +39,9 @@ ul.social {
 		font-size: 2.5em;
 		padding: 0;
 		margin-right: 10px;
+		img {
+			vertical-align: -3px;
+		}
 	}
 	a {
 		color: $white;
@@ -47,4 +50,5 @@ ul.social {
 			color: $black;
 		}
 	}
+
 }

@@ -21,6 +21,7 @@
 <body <?php body_class(); ?>>
 
 <header>
+  <i class="fa fa-bars fa-3x" id="open"></i>
   <div class="container">
     <nav class="main-nav">
       <h1>
@@ -33,6 +34,7 @@
         'container' => false,
         'theme_locations' => 'primary'
       )); ?>
+      <i class="fa fa-times fa-3x" id="close"></i>
     </nav>
   </div> <!-- /.container -->
 </header><!--/.header-->

@@ -6,6 +6,7 @@
 		<li><a href="https://www.facebook.com/YarnsUntangled" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
 		<li><a href="https://twitter.com/YarnsUntangled" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
 		<li><a href="https://instagram.com/yarnsuntangled/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+    <li><a href="http://www.ravelry.com/groups/yarns-untangled"><img src="http://localhost:8888/Work/003-yarns-untangled/wordpress/wp-content/uploads/2015/10/ravelryicon.png" alt=""></a></li>
 	</ul>
   </div>
   <div class="instagram">

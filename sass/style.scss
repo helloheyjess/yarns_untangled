@@ -23,6 +23,7 @@ Default Styling
 img {
 	max-width: 100%;
 	height: auto;
+	border-radius: 3px;
 }
 
 body {
@@ -33,9 +34,12 @@ body {
 .container {
 	max-width: 1100px;
 	margin: 50px auto;
-	@media all and (max-width: 1024px) {
-		padding: 0 2.5%;
-	}
+	padding: 0 25px;
+}
+
+.container .main .container {
+	margin: 0;
+	padding: 0;
 }
 
 .centered {
@@ -65,6 +69,13 @@ body {
 	padding: 25px;
 	margin: 50px 0;
 	background: $white;
+	h2 {
+		margin-top: 0;
+	}
+	img {
+		float: left;
+		margin-right: 20px;
+	}
 }
 
 
@@ -79,19 +90,22 @@ body {
 }
 
 .welcome {
-	width: 60%;
-	margin-right: 5%;
+	width: 63%;
+	margin-right: 7%;
+	h1 {
+		margin-top: 0;
+	}
 	@media all and (max-width: 1024px) {
 		width: 100%;
 	}
 }
 
 .feature {
-	border-top: 3px solid $yellow;
+	border-top: 3px solid $orange;
 	background: $white;
 	border-radius: 3px;
 	padding: 15px 35px;
-	width: 35%;
+	width: 30%;
 	@media all and (max-width: 1024px) {
 		width: calc(100% - 15px);
 		border-top: none;
@@ -99,6 +113,12 @@ body {
 		margin-top: 50px;
 		img {
 			float: left;
+			margin-bottom: 0;
+		}
+	}
+	@media all and (max-width: 700px) {
+		img {
+			float: none;
 		}
 	}
 	a {
@@ -108,14 +128,14 @@ body {
 		font-size: 1.25em;
 	}
 	h3 {
-		margin: 0;
+		margin-top: 0;
 	}
 	p {
 		margin-top: 0;
 	}
 	img {
-		mix-blend-mode: multiply;
-		margin: 10px 0;
+		margin-right: 20px;
+		margin-bottom: 10px;
 		max-width: 100%;
 		height: auto;
 	}
@@ -127,21 +147,39 @@ body {
 	}
 }
 
+.featured-yarn-img {
+	img {
+		float: left;
+		margin-right: 20px;
+		@media all and (max-width: 700px) {
+			float: none;
+			margin-bottom: 10px;
+		}
+	}
+}
+
 .item-container {
 	display: flex;
 	justify-content: center;
+	@media all and (max-width: 700px) {
+		display: block;
+	}
 }
 
 .img-thumb {
 	width: 25%;
 	margin-right: 5%;
-	img {
-		border-radius: 3px;
+	@media all and (max-width: 700px) {
+		width: 100%;
+		margin-bottom: 10px;
 	}
 }
 
 .post-content {
 	width: 70%;
+	@media all and (max-width: 700px) {
+		width: 100%;
+	}
 }
 
 .archive {
@@ -166,7 +204,7 @@ body {
 	margin-bottom: 50px;
 	flex-wrap: wrap;
 	li {
-		width: calc(50% - 15px);
+		width: calc(50% - 7.5px);
 		@media all and (max-width: 800px){
 			width: 100%;
 			margin-top: 25px;
@@ -180,6 +218,23 @@ body {
 	margin-right: 15px;
 	background: $white;
 	border-radius: 3px;
+	&:last-child {
+		margin-right: 0;
+	}
+	time {
+		color: $blue;
+		font-weight: 600;
+		font-style: italic;
+	}
+}
+
+.rpwe-summary {
+	margin-top: 10px;
+}
+
+.rpwe-thumb {
+	float: left;
+	margin-right: 20px;
 }
 
 .more-link {
@@ -188,7 +243,7 @@ body {
 }
 
 .rpwe-block h3{
-	margin-top: 0;
+	margin: 0;
 	a {
 		color: $black;
 		text-transform: none;
@@ -229,18 +284,55 @@ zoom: 1;
 }
 
 .class-details {
+	img {
+		float: left;
+		margin-right: 20px;
+		margin-bottom: 10px;
+	}
 	p {
 		margin: 0;
 	}
 }
 
 .highlight {
-	color: $orange;
-	font-weight: 600;
+	// color: $orange;
+	font-weight: 700;
 }
 
+.blue {
+	color: $blue;
+}
 
+.nav-previous,
+.nav-next {
+	margin-bottom: 25px;
+}
 
+#classes {
+	h2 {
+		color: $blue;
+	}
+	h3.entry-title {
+		color: $black;
+		margin-bottom: 0;
+	}
+}
+
+.class-details {
+	background: $white;
+	padding: 20px;
+	border-radius: 3px;
+	border-left: 3px solid $blue;
+	margin-top: 15px;
+  ul {
+  	padding: 0;
+  	list-style-type: none;
+  	li {
+  		margin: 0;
+  		padding: 0;
+  	}
+  }
+}
 
 
 

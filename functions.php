@@ -14,7 +14,7 @@ function theme_setup() {
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
 	add_image_size('logo', 300, 74, false);
-	add_image_size('blog', 400, 200, true);
+	add_image_size('blog', 400, 400, true);
 
 	// Add theme support for logo
 	add_theme_support( 'site-logo', array(

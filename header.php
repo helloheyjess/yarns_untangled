@@ -21,6 +21,7 @@
 <body <?php body_class(); ?>>
 
 <header>
+  <i class="fa fa-bars fa-3x" id="open"></i>
   <div class="container">
     <nav class="main-nav">
       <h1>
@@ -28,11 +29,13 @@
           <?php if ( function_exists( 'jetpack_the_site_logo' ) ) jetpack_the_site_logo(); ?>
         </a>
       </h1>
-
+      
       <?php wp_nav_menu( array(
         'container' => false,
         'theme_locations' => 'primary'
       )); ?>
+      <i class="fa fa-times fa-3x" id="close"></i>
+      
     </nav>
     <div class="hero">
                 <?php 

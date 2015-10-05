@@ -31,7 +31,7 @@ get_header();  ?>
 							} 
 							?>
 						    <h3><?php the_title(); ?></h3>
-						    <p><?php the_field('short_desc'); ?>...</p>
+						    <p><?php the_field('short_desc'); ?></p>
 						    <a href="<?php the_permalink() ?>">Learn More</a>
 					    </div>
 					<?php } ?>
@@ -40,6 +40,7 @@ get_header();  ?>
 	</div>
 	<div class="inner-container">
 		<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Latest') ) ?>
+		<a href="http://localhost:8888/Work/003-yarns-untangled/wordpress/blog/" class="btn">More</a>
 	</div>
   </div> <!-- /.container -->
 </div> <!-- /.main -->

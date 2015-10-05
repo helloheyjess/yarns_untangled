@@ -8,7 +8,13 @@
         <h1>Yarns Untangled Blog</h1>
 		<?php if ( have_posts() ) : ?>
 		<?php while ( have_posts() ) : the_post();  ?>
+
             <div class="the-post">
+                <?php 
+                if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                    the_post_thumbnail('medium');
+                } 
+                ?>
                 <h2><?php the_title(); ?></h2>
                 <?php the_excerpt(); ?>
             </div>
@@ -17,7 +23,7 @@
 		<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 
 		<?php else : ?>
-		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+		<p><?php _e('Coming Soon!'); ?></p>
 		<?php endif; ?>
     </div> <!--/.content -->
 
